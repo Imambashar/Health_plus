@@ -51,7 +51,7 @@ const LoginPage = () => {
 
     try {
       setLoading(true);
-      const { data } = await axios.post("/api/auth/login", values);
+      const { data } = await axios.post("https://health-plus-backend.onrender.com/api/auth/login", values);
       if (data && data?.success) {
         const authData = {
           isAuthenticated: true,
